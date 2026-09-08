@@ -1,5 +1,4 @@
-
- 
+/* main */
 :root {
   --bg: #F8F4EC;
   --text: #1A2F23;
@@ -43,9 +42,8 @@ img {
   max-width: 100%;
   display: block;
 }
-
-/* ========== CORNER NAV ========== */
-
+ 
+/* Navigation Coners */
 .corner-nav {
   position: fixed;
   inset: 0;
@@ -72,8 +70,7 @@ img {
 .corner-nav .nav-about { top: 0; right: 0; }
 .corner-nav .nav-contact { bottom: 0; right: 0; }
 
-/* ========== HOMEPAGE ========== */
-
+/* home layout */
 .home {
   min-height: 100vh;
   display: flex;
@@ -107,12 +104,22 @@ img {
 
 /* Diamond */
 
-.diamond-wrapper {
+/* .diamond-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: min(58vw, 620px);
+  aspect-ratio: 1;
+  z-index: 5;
+} */
+
+.diamond-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(85vw, 900px);
   aspect-ratio: 1;
   z-index: 5;
 }

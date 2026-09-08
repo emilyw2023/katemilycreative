@@ -89,7 +89,9 @@ img {
 
 .home-name h1 {
   font-size: clamp(2.8rem, 7vw, 5.5rem);
-  font-weight: 800;
+  font-family: "operetta-12", serif;
+  font-weight: 900;
+  font-style: italic;
   line-height: 0.9;
   letter-spacing: -0.03em;
   text-transform: uppercase;
@@ -193,7 +195,8 @@ img {
   border-color: var(--accent);
 }
 
-/* ========== TOP NAV ========== */
+
+/* Navigation Bar */
 
 .top-nav {
   position: fixed;
@@ -238,8 +241,7 @@ img {
   color: var(--accent);
 }
 
-/* ========== OTHER PAGES ========== */
-
+/* other pages */
 .page {
   padding: 7rem 2.5rem 5rem;
   max-width: 1200px;
@@ -255,6 +257,24 @@ img {
   color: var(--green-dark);
 }
 
+.about-title {
+  font-family: "operetta-12", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.portfolio-title {
+  font-family: "operetta-12", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.contact-title {
+  font-family: "operetta-12", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -266,7 +286,8 @@ img {
 .project-image {
   aspect-ratio: 4 / 5;
   background: var(--light);
-  border: 1px solid var(--border);
+  border-radius: 22px;
+  /* border: 1px solid var(--border); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,7 +412,7 @@ img {
   margin-top: 4rem;
 }
 
-/* ========== RESPONSIVE ========== */
+/* resposive */
 
 @media (max-width: 900px) {
   .home-name { left: 1.5rem; }

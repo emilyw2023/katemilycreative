@@ -225,6 +225,7 @@ img {
   font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  transition: color 0.2s;
 }
 
 .top-nav .links {
@@ -240,6 +241,7 @@ img {
   transition: color 0.2s;
 }
 
+.top-nav .logo:hover,
 .top-nav .links a:hover,
 .top-nav .links a.active {
   color: var(--accent);
@@ -321,11 +323,97 @@ img {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
+  transition: color 0.2s;
+}
+
+.project-card:hover .project-info h3 {
+  color: var(--accent);
 }
 
 .project-info p {
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.project-page {
+  max-width: 900px;
+}
+
+.project-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.project-back:hover {
+  color: var(--accent);
+}
+
+.project-detail h1 {
+  font-family: "operetta-12", serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.project-detail-image {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  background: var(--light);
+  border-radius: 22px;
+  display: block;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-gallery-placeholder {
+  aspect-ratio: 4 / 5;
+  background: var(--light);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-gallery-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+}
+
+.project-detail-placeholder {
+  min-height: 360px;
+  background: var(--light);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-detail p {
+  max-width: 600px;
+  margin-top: 1.5rem;
+  line-height: 1.7;
 }
 
 /* about */
@@ -453,6 +541,8 @@ img {
 }
 
 @media (max-width: 700px) {
+  .project-gallery { grid-template-columns: 1fr; }
+
   .corner-nav { display: none; }
   .page-home .top-nav.mobile-only { display: flex; }
 

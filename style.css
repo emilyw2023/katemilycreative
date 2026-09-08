@@ -1,5 +1,51 @@
-/* index */
-/* navigation */
+
+ 
+:root {
+  --bg: #F8F4EC;
+  --text: #1A2F23;
+  --muted: #5C6B62;
+  --light: #EDE6D9;
+  --border: #D9D0C0;
+  --accent: #E07A5F;
+  --green: #3A6B5A;
+  --green-dark: #1A2F23;
+  --font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== CORNER NAV ========== */
+
 .corner-nav {
   position: fixed;
   inset: 0;
@@ -22,21 +68,12 @@
   color: var(--accent);
 }
 
-.corner-nav .nav-work {
-  top: 0;
-  left: 0;
-}
+.corner-nav .nav-work { top: 0; left: 0; }
+.corner-nav .nav-about { top: 0; right: 0; }
+.corner-nav .nav-contact { bottom: 0; right: 0; }
 
-.corner-nav .nav-about {
-  top: 0;
-  right: 0;
-}
-.corner-nav .nav-contact {
-  bottom: 0;
-  right: 0;
-}
+/* ========== HOMEPAGE ========== */
 
-/* layout */
 .home {
   min-height: 100vh;
   display: flex;
@@ -65,12 +102,10 @@
 .home-name .tagline {
   margin-top: 1.2rem;
   font-size: 0.9rem;
-  font-weight: 400;
   color: var(--muted);
-  letter-spacing: 0.02em;
 }
 
-/* Diamond hero */
+/* Diamond */
 
 .diamond-wrapper {
   position: absolute;
@@ -110,7 +145,7 @@
   text-transform: uppercase;
 }
 
-/* Side project teasers */
+/* Teasers */
 
 .teaser {
   position: absolute;
@@ -142,3 +177,246 @@
   font-size: 0.75rem;
   color: var(--muted);
   border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.teaser .link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ========== TOP NAV ========== */
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2.5rem;
+  background: rgba(248, 244, 236, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 200;
+}
+
+.page-home .top-nav.mobile-only {
+  display: none;
+}
+
+.top-nav .logo {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.top-nav .links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.top-nav .links a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.top-nav .links a:hover,
+.top-nav .links a.active {
+  color: var(--accent);
+}
+
+/* ========== OTHER PAGES ========== */
+
+.page {
+  padding: 7rem 2.5rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  color: var(--green-dark);
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem 2rem;
+}
+
+.project-card { display: block; }
+
+.project-image {
+  aspect-ratio: 4 / 5;
+  background: var(--light);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.project-image .placeholder-text {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.project-info p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-photo {
+  aspect-ratio: 3 / 4;
+  background: var(--light);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo .placeholder-text {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.about-text h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+  max-width: 38ch;
+}
+
+.contact-layout {
+  max-width: 520px;
+}
+
+.contact-layout p {
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-item .label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-item a,
+.contact-item span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+.site-footer {
+  padding: 2rem 2.5rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 900px) {
+  .home-name { left: 1.5rem; }
+  .diamond-wrapper { width: min(70vw, 480px); }
+  .teaser.left { left: 1.5rem; bottom: 12%; }
+  .teaser.right { right: 1.5rem; top: 22%; }
+  .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-photo { max-width: 320px; }
+}
+
+@media (max-width: 700px) {
+  .corner-nav { display: none; }
+  .page-home .top-nav.mobile-only { display: flex; }
+
+  .home {
+    flex-direction: column;
+    padding: 5rem 1.5rem 3rem;
+    min-height: auto;
+  }
+
+  .home-name {
+    position: static;
+    transform: none;
+    margin-bottom: 2.5rem;
+    width: 100%;
+  }
+
+  .home-name h1 { font-size: 2.8rem; }
+
+  .diamond-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 3rem;
+  }
+
+  .teaser {
+    position: static;
+    max-width: none;
+    margin-bottom: 1.5rem;
+    text-align: left !important;
+  }
+
+  .top-nav { padding: 1.2rem 1.5rem; }
+  .top-nav .links { gap: 1.4rem; }
+  .page { padding: 5.5rem 1.5rem 3rem; }
+  .work-grid { grid-template-columns: 1fr; }
+  .site-footer { padding: 1.5rem; }
+}
+
+@media (max-width: 400px) {
+  .home-name h1 { font-size: 2.3rem; }
+  .top-nav .links { gap: 1rem; }
+  .top-nav .links a { font-size: 0.72rem; }
+}

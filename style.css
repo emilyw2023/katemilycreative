@@ -65,7 +65,7 @@ img {
 }
 
 .corner-nav a:hover {
-  color: var(--accent);
+  color: var(--green-dark);
 }
 
 .corner-nav .nav-work { top: 0; left: 0; }
@@ -97,13 +97,13 @@ img {
   line-height: 0.9;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--green-dark);
 }
 
 .home-name .tagline {
   margin-top: 1.2rem;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--green-dark);
 }
 
 /* Diamond */
@@ -146,6 +146,14 @@ img {
   align-items: center;
   justify-content: center;
   background: var(--light);
+}
+
+.diamond-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.65;
 }
 
 .diamond-inner .placeholder-text {
@@ -395,6 +403,11 @@ img {
   object-fit: cover;
   border-radius: 22px;
   display: block;
+}
+
+.project-gallery-image-contain {
+  object-fit: contain;
+  background: var(--light);
 }
 
 .project-detail-placeholder {
